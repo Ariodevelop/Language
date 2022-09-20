@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "outFile": "build/compiler.js",
+    "target": "ES2022",
+    "watch": true,
+  }
+}
