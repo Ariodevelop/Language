@@ -1,3 +1,15 @@
+class token {
+  type: string;
+  data: string;
+  end: number;
+  start: number;
+  constructor(start, end, data, type) {
+    this.type = type;
+    this.start = start;
+    this.end = end;
+    this.data = data;
+  }
+}
 function lexer(input: string) {
   let length: number = input.length;
   let index: number = 0;
@@ -6,7 +18,7 @@ function lexer(input: string) {
   let char: string = input.charAt(index);
   let next_char = input.charAt(index + 1);
 
-  let tokens: Array<object> = [];
+  let tokens: Array<token> = [];
 
   function end_of_file() {
     return index >= length - 1;
